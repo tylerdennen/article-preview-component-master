@@ -1,0 +1,147 @@
+:root {
+    --dark-blue: hsl(214, 17%, 51%);
+    --gray-blue: hsl(212, 23%, 69%);
+    --ligh-gray-blue: hsl(210, 46%, 95%);
+    --dark-gray-blue: hsl(217, 19%, 35%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--ligh-gray-blue);
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    font-size: 13px;
+    padding: 0 15px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-gray-blue);
+    font-weight: 700;
+}
+
+button:focus {
+    outline: none; 
+}
+
+.article {
+    margin: auto;
+    flex-basis: 720px;
+    position: relative;
+}
+
+.article__inner {
+    overflow: hidden;
+    display: flex;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.article__img {
+    max-width: 39%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.article__main {
+    padding: 35px 40px 30px;
+}
+
+.article__title {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 15px;
+}
+
+.article__text {
+    color: var(--dark-blue);
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.article__bottom {
+    display: flex;
+    align-items: center;
+}
+
+.article__person {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.article__bottom-info {
+    flex-grow: 1;
+}
+
+.article__author,
+.article__date {
+    display: block;
+}
+
+.article__author {
+    margin-bottom: 8px;
+}
+
+.article__date {
+    color: var(--gray-blue);
+}
+
+.article__btn {
+    background-color: var(--ligh-gray-blue);
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.article__share {
+    position: absolute;
+    display: flex;
+    padding: 15px 35px;
+    background-color: var(--dark-gray-blue);
+    border-radius: 10px;
+    align-items: center;
+    bottom: 86px;
+    right: -67px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.article__share--active {
+    opacity: 1;
+}
+
+.article__share::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: var(--dark-gray-blue);
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.article__share-text {
+    text-transform: uppercase;
+    color: var(--gray-blue);
+    margin-right: 20px;
+    letter-spacing: 5px;
+}
+
+.article__share-picture + .article__share-picture {
+    margin-left: 15px;
+}
+
+.twitter {
+    align-self: flex-end;
+}
+
