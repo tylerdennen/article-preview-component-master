@@ -43,7 +43,7 @@ button:focus {
 }
 
 .article__img {
-    max-width: 39%;
+    max-width: 40%;
     object-fit: cover;
     object-position: 50% 50%;
 }
